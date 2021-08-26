@@ -53,4 +53,6 @@ public class CheckIf2ArraysAreEqual {
     }
 }
 
-[Link to Video Explanation](https://www.google.com)
+[Link to Video Explanation](https://drive.google.com/file/d/1rm39H5BMiDSX_B24vzoOFQZ81nvw4w7U/view?usp=sharing)
+                            
+https://drive.google.com/file/d/1rm39H5BMiDSX_B24vzoOFQZ81nvw4w7U/view?usp=sharing
