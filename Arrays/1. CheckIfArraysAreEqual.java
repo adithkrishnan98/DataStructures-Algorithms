@@ -53,12 +53,12 @@ public class CheckIf2ArraysAreEqual {
     }
 }
 
-// Output :
-// 1
-// 0
+/* Output :
+1
+0
 
-// Time Complexity : O(n) as we have to traverse through n elements in the array
-// Space Complexity : O(n) since we create a hashmap and store counts of n elements in it
+Time Complexity : O(n) as we have to traverse through n elements in the array
+Space Complexity : O(n) since we create a hashmap and store counts of n elements in it
 
 
-// Video Explanation : https://drive.google.com/file/d/1rm39H5BMiDSX_B24vzoOFQZ81nvw4w7U/view?usp=sharing
+Video Explanation : https://drive.google.com/file/d/1rm39H5BMiDSX_B24vzoOFQZ81nvw4w7U/view?usp=sharing */
