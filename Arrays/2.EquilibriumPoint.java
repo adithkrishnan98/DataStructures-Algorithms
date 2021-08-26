@@ -1,3 +1,19 @@
+/* 
+Question :
+Given an array A of N positive numbers. The task is to find the position where equilibrium first occurs in the array. Equilibrium position in an array is a position such that the sum of elements before it is equal to the sum of elements after it. Complete the function whose argument is the array A and which prints the position at which the elements are at equilibrium if no equilibrium point exists print -1.
+
+Constraints:
+1 <= N <= 106
+1 <= Ai <= 108
+
+Explanation : 
+In the brute force approach, we can use nested loops. Outer loops picks out each element and an inner loop checks if the picked index is equilibrium index 
+or not by calculating left sum and right sum and equating them to find if they are equal. This takes O(n^2) time complexity and is thus not very efficient. 
+
+An efficient method would be to first calculate the entire sum of the array. Then initialise the left sum as 0. Now we caluclate right sum by subtrating 
+each element from the sum and equating it to the left sum. If it is equal we return that index, else we add that index's value to the left sum and move on 
+to the next index and follow the similar steps. This method takes O(n) time as we are using two individual for loops. Below is its code implementation :
+*/
 
 public class EquilibriumPoint {
 
