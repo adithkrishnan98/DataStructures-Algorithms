@@ -52,3 +52,5 @@ public class CheckIf2ArraysAreEqual {
         System.out.println(areEqual(arr3, arr4) ? 1 : 0);
     }
 }
+
+[Link to Video Explanation](https://www.google.com)
