@@ -1,4 +1,3 @@
-package Problems.Arrays;
 
 public class EquilibriumPoint {
 
@@ -35,3 +34,13 @@ public class EquilibriumPoint {
         System.out.println(result2);
     }
 }
+
+/* Output :
+0
+2
+
+Time Complexity : O(n) as we first find find the sum of whole array (for n elements) which takes O(n) time and then we loop through n elements again 
+and find left sum which takes O(n) again. So total time complexity is O(n) + O(n) = O(2n) = O(n)
+Space Complexity : O(1) as we do not utilize any extra space
+
+Video Explanation : https://drive.google.com/file/d/1h_sU8QWz6-Os5UKSvhdyF6sUCasoobPf/view?usp=sharing */
