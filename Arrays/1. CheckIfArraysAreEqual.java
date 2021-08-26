@@ -1,3 +1,14 @@
+/* 
+Question :
+Given two given arrays of equal length, the task is to find if given arrays are equal or not. Two arrays are said to be equal if both of them contain the same 
+set of elements, arrangements (or permutation) of elements may be different though.
+
+Explanation :
+In the brute force approach, we sort both the arrays and go through them linearly to check if elements are equal or not. But this is not so efficient method.
+An Efficient Solution to this approach is to use hashing. We store all elements of arr1[] and their counts in a hash map. Then we traverse arr2[] and check 
+if the count of every element in arr2[] matches with the count in arr1[].
+*/
+
 import java.util.HashMap;
 
 public class CheckIf2ArraysAreEqual {
