@@ -1,11 +1,21 @@
-/* Question :
+/* 
+Question :
 Given an array of n integers where each value represents the number of chocolates in a packet. Each packet can have a variable number of chocolates. There are m students, the task is to distribute chocolate packets such that:
    - Each student gets one packet.
    - The difference between the number of chocolates in the packet with maximum chocolates and packet with minimum chocolates given to the students is minimum.
 Implement a method chocolateDistribuite(c[], m) and print the minimum difference.
 Constraints :
 1 <= A[i] <= 10^18
-1 <= M <= length of A */
+1 <= M <= length of A 
+
+Explanation :
+So in this problem, we have M student and N number of packets with each packet having a variable number of chocolates. In order to get the minimum difference, 
+we can simply generate all subsets of size m of arr[0..n-1] and for every subset, we find the difference between the maximum and minimum elements in it and 
+return the minimum difference.
+But a more efficient way would be to first sort the array arr[0..n-1], then find the subarray of size m with the minimum difference between the last and first 
+elements. We keep doing this until the size of the sorted original array of chocolate packets and overwritting the min_difference if it is lesser than the 
+previous difference. Below is the code implementation :
+*/
 
 import java.util.Arrays;
 
