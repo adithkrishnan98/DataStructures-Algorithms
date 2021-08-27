@@ -23,8 +23,6 @@ Let's take a small example of n = 5. The chosen spot will be 3. Below will be th
 (josephus(1 - 1) + 1 % 1 + 1) = 2 % 2 = 0
 */
 
-package Problems.Arrays;
-
 public class Josephus {
     static int josephus(int n, int k)
     {
