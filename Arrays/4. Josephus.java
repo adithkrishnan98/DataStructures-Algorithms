@@ -21,6 +21,7 @@ Let's take a small example of n = 5. The chosen spot will be 3. Below will be th
 (josephus(3 - 1) + 1 % 3 + 1) = 2 % 4 = 2
 (josephus(2 - 1) + 1 % 2 + 1) = 1 % 3 = 1
 (josephus(1 - 1) + 1 % 1 + 1) = 2 % 2 = 0
+
 */
 
 public class Josephus {
@@ -63,5 +64,8 @@ Time Complexity : O(n) as everytime we kill a person by going around the cirlce 
 it decreases to n-1 people left in the circle. So each time n is being decremeneted by 1 until there is only one person remaining (base case) and n such states will
 be created.So time complexity will be O(n)
 Space Complexity : O(n) if we consider the functional stack usage for the n recursive calls made
+
+Video Explanation : https://drive.google.com/file/d/1JZlI0Sh23O8DjKcpqvjb7z8qOcNGW5j1/view?usp=sharing
+*/
 
 
