@@ -1,4 +1,31 @@
-package Problems.LinkedList;
+/*
+Question :
+Given two numbers represented by two linked lists of size N and M. The task is to return a sum list. The sum list is a linked list representation of the 
+addition of two input numbers.Complete the function addTwoLists() which takes both the linked lists and returns the new list.
+
+Expected Time Complexity: O(N) + O(M)
+Expected Auxiliary Space: O(N) + O(M)
+
+Constraints:
+1 <= N, M <= 5000
+
+Explanation :
+We solve this problem like how we solved addition of two numbers in elementary school where we hold our fingers in our hands and then count them all together to 
+add up both the numbers. If the sum was of a two digit number, we first add the untits place numbers and then if the sum goes more than 9 we have a carry over in 
+our mind and we write down just the units sum. And then we add that carry over along with the sum of the numbers in the tens place. The idea to solve this problem 
+is the same. We traverse both lists and one by one pick nodes of both lists and add the values. If the sum is more than 9 then make carry as 1 and reduce sum.
+If one list has more elements than the other then consider the remaining values of this list as 0. 
+
+Steps :
+1. First reverse both the linked lists. Then call the addTwoLists() method on the reversed lista.
+2. Traverse the two linked lists from start to end
+2. Add the two digits each from respective linked lists.
+3. If one of the lists has reached the end then take 0 as its digit.
+4. Continue it until both the end of the lists.
+5. If the sum of two digits is greater than 9 then set carry as 1 and the current digit as sum % 10
+6. Finally we reverse the output list back default order.
+
+*/
 
 public class addTwoNosRepresentedByLL {
     static Node head1, head2, head3, head4;
@@ -152,3 +179,20 @@ public class addTwoNosRepresentedByLL {
         list.printList(result2);
     }
 }
+
+/*
+Output :
+First List is 4 5
+Second List is 3 4 5
+Resultant List is 3 9 0
+
+First List is 6 3
+Second List is 7
+Resultant List is 7 0
+
+
+Time Complexity: O(m + n), where m and n are numbers of nodes in first and second lists respectively. The lists need to be traversed only once.
+Space Complexity: O(m + n) as a temporary linked list is needed to store the output number
+
+Video Explanation : https://drive.google.com/file/d/1OUZqS9E5eurV-_fR5XZUpgOHVxHdZF_F/view?usp=sharing
+*/
