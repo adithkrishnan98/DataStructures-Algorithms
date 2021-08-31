@@ -1,4 +1,31 @@
-package Problems.LinkedList;
+/*
+Question :
+Given K sorted linked lists of different sizes. The task is to merge them in such a way that after merging they will be a single sorted linked list.
+Complete the function mergeKList() which merges the K given lists into a sorted one.
+
+Expected Time Complexity: O(n.k.logk)
+Expected Space Complexity : O(k)
+
+n is the maximum size of all the k linked lists
+
+Constraints
+1 <= K <= 10^3
+
+Explanation :
+To solve this problem, we use a priority queue implemented as min heap with help of compare function which orders elements in the ascending order. We add the 
+first nodes of all three lists and then we check until queue is not empty and pop out the first element and remove it from the queue. We check if that element 
+has another element next to it, if it does we add that to the queue as well. And then we check if head is null, if it is we set the popped element as head 
+as last. Then the next time when head isn't null, we set the last.next to the next incoming element. Thus we get a sorted merged list of 3 individual lists. 
+
+Steps :
+a) Create a min-heap and insert the first element of all the ‘k’ linked lists.
+b) As long as the min-heap is not empty, perform the following steps:
+           b.1) Remove the top element of the min-heap (which is the current minimum among all the elements in the min-heap) and add it to the result list.
+           b.2) If there exists an element (in the same linked list) next to the element popped out in previous step, insert it into the min-heap.
+c) Return the head node address of the merged list.
+
+*/
+
 import java.util.PriorityQueue;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -119,3 +146,13 @@ public class MergeKSortedLL {
         printList(head);
     }
 }
+
+/*
+Output :
+0 1 2 3 4 5 6 7 8 9 10 11
+
+Time Complexity : O(nklogk) where n is size of each linked list, k is the total number of lists and insertion and deletion of min heap requires logk time. 
+Space Complexity : O(k) as the priority queue created will have a maximum of k number of elements
+
+Video Explanation : https://drive.google.com/file/d/1pgLEx5KsMEKskEwzColJuVEiRI6797Jm/view?usp=sharing
+*/
