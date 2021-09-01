@@ -1,4 +1,32 @@
-package Problems.Trees;
+/*
+Question : 
+Given a Binary Search Tree (with all unique values) and two node values. Find the Lowest Common Ancestors of the two nodes in the BST. Complete the function LCA() 
+which takes the root Node of the BST and two integer values n1 and n2 as inputs and returns the Lowest Common Ancestor of the Nodes with values n1 and n2 in the 
+given BST.
+
+Expected Time Complexity: O(Height of the BST)
+Expected Space Complexity : O(Height of the BST)
+
+Constraints:
+1 <= N <= 104">104
+
+Explanation : 
+In this problem, we traverse the tree from top to bottom and we see if the node value lies between the numbers n1 and n2. If it does it is the lca of the node. 
+We recursviely traverse the BST and check if the node's value is greater than or lesser than our n1 and n2. If it is greater than, then the lca lies on the left 
+subtree and we call lca(left_subtree) else if it is smaller than n1 and n2, then the lca lies on the right subtree and we call lca(right_subtree). Otherwise the 
+root will be the lca. 
+
+*/
+
+class Node {
+    int key;
+    Node left, right;
+
+    public Node(int key){
+        this.key = key;
+        left = right = null;
+    }
+}
 
 public class LowestCommonAncestorBST {
 
@@ -46,7 +74,7 @@ public class LowestCommonAncestorBST {
         System.out.println("LCA of " + n1 + " and " + n2 + " is " + t.key);
         
         System.out.println();
-
+        
         LowestCommonAncestorBST tree2 = new LowestCommonAncestorBST();
         tree2.root = new Node(20);
         tree2.root.left = new Node(8);
@@ -72,4 +100,21 @@ public class LowestCommonAncestorBST {
     }
 }
 
-// LCA using disjoint sets
+/*
+
+Output :
+
+LCA of 4 and 6 is 5
+LCA of 11 and 12 is 11
+LCA of 5 and 13 is 8
+
+LCA of 10 and 14 is 12
+LCA of 14 and 8 is 8
+LCA of 10 and 22 is 20
+
+Time complexity : O(h) as we need to traverse through the levels from top to bottom to find the lca
+Space complexity : O(h) due to stack space during recursive function calls which again depends on height of tree
+
+Video Explanation : https://drive.google.com/file/d/1PheN1Cpn6oWW6xAgf4JnQ1Fx7bgz1hf4/view?usp=sharing
+
+*/
