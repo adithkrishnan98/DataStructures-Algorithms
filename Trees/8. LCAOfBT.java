@@ -1,4 +1,24 @@
-package Problems.Trees;
+/*
+Question :
+Given a Binary Tree with all unique values and two nodes value n1 and n2. The task is to find the lowest common ancestor of the given two nodes. We may assume 
+that either both n1 and n2 are present in the tree or none of them is present. Complete the function lca() that takes nodes, n1, and n2 as parameters and returns 
+LCA node as output.
+
+Expected Time Complexity: O(N).
+Expected Space Complexity : O(H).
+H is the height of the tree.
+
+Constraints:
+1 <= Number of nodes <= 100
+1 <= Data of a node <= 1000
+
+Explanation : 
+The idea is to traverse the tree starting from the root. If any of the given keys (n1 and n2) matches with the root, then the root is LCA (assuming that both keys 
+are present). If the root doesn’t match with any of the keys, we recur for the left and right subtree and call LCA again. The node which has one key present in 
+its left subtree and the other key present in the right subtree will be the LCA. If both keys lie in the left subtree, then the left subtree has LCA also, 
+otherwise, LCA lies in the right subtree. 
+
+*/
 
 public class LCAOfBT {
     Node root;
@@ -47,4 +67,18 @@ public class LCAOfBT {
         System.out.println("LCA(2, 4) = " + tree.findLCA(2, 4).key);
     }
 }
+
+/*
+Output :
+LCA(4, 5) = 2
+LCA(4, 6) = 1
+LCA(3, 4) = 1
+LCA(2, 4) = 2
+
+Time Complexity : O(n) as we have to traverse n nodes in a tree
+Space Complexity : O(H) if we take into consideration the implicit stack for the various recursion calls to the subtrees of H height.
+
+Video Explanation : https://drive.google.com/file/d/1bxGIjK_aGWV2luXlnRjjcYUDGOOydrjf/view?usp=sharing
+
+*/
 
