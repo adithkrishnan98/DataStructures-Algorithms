@@ -1,4 +1,5 @@
 /*
+Question :
 Implement a Stack using two queues q1 and q2.
 
 You are required to complete the two methods push() which takes an integer 'x' as input denoting the element to be pushed into the stack and pop() which returns the integer popped out from the stack.
